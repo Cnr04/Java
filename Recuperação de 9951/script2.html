@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script 2</title>
+    <script>
+        // Função para mostrar a mensagem de confirmação
+        function verificarGostarCurso() {
+            var divConfirmacao = document.getElementById("confirmacao");
+            divConfirmacao.innerHTML = "<p>Você está gostando do curso?</p>";
+            divConfirmacao.innerHTML += "<button onclick='responderSim()'>Sim</button>";
+            divConfirmacao.innerHTML += "<button onclick='responderNao()'>Não</button>";
+        }
+
+        // Função para lidar com a resposta "Sim"
+        function responderSim() {
+            document.getElementById("confirmacao").innerHTML = "<p>Parabéns!</p>";
+        }
+
+        // Função para lidar com a resposta "Não"
+        function responderNao() {
+            document.getElementById("confirmacao").innerHTML = "<p>Que pena!</p>";
+        }
+
+        // Função para calcular e exibir a soma dos números
+        function calcularSoma() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var soma = num1 + num2;
+            document.getElementById("resultadoSoma").innerText = soma;
+        }
+    </script>
+</head>
+<body>
+    <h1>Script 2</h1>
+    <p>Clique no botão abaixo para verificar se você está gostando do curso:</p>
+    <button onclick="verificarGostarCurso()">Verificar</button>
+    <div id="confirmacao"></div>
+    <p>Digite os valores para os números a serem somados:</p>
+    <label for="num1">Número 1:</label>
+    <input type="number" id="num1">
+    <br>
+    <label for="num2">Número 2:</label>
+    <input type="number" id="num2">
+    <br>
+    <button onclick="calcularSoma()">Calcular Soma</button>
+    <p>A soma dos números é: <span id="resultadoSoma"></span>.</p>
+</body>
+</html>
